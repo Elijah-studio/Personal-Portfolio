@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jiro Elijah Aguilar - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <nav class="navigator">
+      <ul>
+        <li><a href="#home" onclick="renderSection('home')">Home</a></li>
+        <li><a href="#about" onclick="renderSection('about')">About</a></li>
+        <li><a href="#skills" onclick="renderSection('skills')">Skills</a></li>
+        <li>
+          <a href="#projects" onclick="renderSection('projects')">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" onclick="renderSection('contact')">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="video-background">
+      <video autoplay muted loop id="background-video">
+        <source
+          src="https://www.desktophut.com/files/1674103412-1674103412-pixel-planet.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+
+    <div id="main-content" class="content"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

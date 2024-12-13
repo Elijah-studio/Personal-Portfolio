@@ -1,0 +1,37 @@
+// Dynamically populate the navigation bar
+const navLinks = [
+  { name: "Home", href: "#hero" },
+  { name: "About Me", href: "#aboutMe" },
+  { name: "Skills", href: "#skills" },
+  { name: "Contact", href: "#contact" },
+];
+
+const nav = document.getElementById("nav");
+nav.innerHTML = `
+  <ul class="nav">
+    ${navLinks
+      .map((link) => `<li><a href="${link.href}">${link.name}</a></li>`)
+      .join("")}
+  </ul>
+`;
+
+// Handle "Learn More" button click
+document.getElementById("learn-more").addEventListener("click", () => {
+  document.getElementById("aboutMe").innerHTML = `
+    <h2>About Me</h2>
+    <p>I am a software developer specializing in creating efficient and scalable solutions. I love solving problems and building applications that make a difference.</p>
+  `;
+  document.getElementById("skills").innerHTML = `
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming: JavaScript, C#, Python</li>
+      <li>Web Development: HTML, CSS, React</li>
+      <li>Database: SQL, Firebase</li>
+    </ul>
+  `;
+  document.getElementById("contact").innerHTML = `
+    <h2>Contact</h2>
+    <p>Email: joshua.valenzuela@example.com</p>
+    <p>Phone: +123-456-7890</p>
+  `;
+});
